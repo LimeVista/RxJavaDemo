@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="me.lime.rxjavademo.MainActivity">
@@ -9,10 +10,54 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="手机号码："
+        android:paddingTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/hello_text"
+        android:textAlignment="center"
+        android:layout_marginStart="16dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询归属地"
+        android:id="@+id/btn1"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hello_text"
+        app:layout_constraintLeft_toRightOf="@+id/num_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/num_edit"
+        android:inputType="number"
+        android:maxLength="11"
+        app:layout_constraintLeft_toRightOf="@+id/hello_text"
+        app:layout_constraintRight_toLeftOf="@+id/btn1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hello_text" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/display_text"
+        app:layout_constraintTop_toBottomOf="@+id/num_edit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:text="test"
+        android:textSize="14dp"
+        android:textColor="#666"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
 
 </android.support.constraint.ConstraintLayout>
